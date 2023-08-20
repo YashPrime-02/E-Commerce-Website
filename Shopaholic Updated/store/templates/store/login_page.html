@@ -1,0 +1,40 @@
+<!-- login.html -->
+
+<style>
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+label, input {
+  display: block;
+  margin-bottom: 10px;  
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  padding: 10px 20px; 
+  background: #555;
+  color: #fff;
+  border: 0;
+}
+</style>
+
+<form method="post">
+  {% csrf_token %}
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+
+  <input type="submit" value="Login">
+</form>
